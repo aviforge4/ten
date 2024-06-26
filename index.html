@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <!-- Additional CSS for enhanced UI -->
+    <link href="assets/css/enhanced-styles.css" rel="stylesheet">
+    <link href="assets/css/video-styles.css" rel="stylesheet">
+    <link href="assets/css/_variables.scss" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Content Area -->
+    <div class="main-container" id="mainContent">
+        <!-- Top Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Menu Icon -->
+                <button class="btn btn-outline-secondary mr-3" id="menuButton" data-toggle="tab" href="#menu" aria-label="Menu">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+
+                <!-- Search Bar -->
+                <form class="form-inline my-2 my-lg-0 mx-auto d-flex flex-grow-1">
+                    <i class="fas fa-search search-icon"></i>
+                    <input class="form-control mr-sm-2 flex-grow-1" type="search" placeholder="Search" aria-label="Search">
+                </form>
+
+                <!-- Profile Photo -->
+                <div class="d-flex align-items-center profile-menu-buttons">
+                    <img src="assets/img/profile.jpg" alt="Profile Photo" class="rounded-circle profile-photo">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs justify-content-center w-100" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fas fa-home fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="photos-tab" data-toggle="tab" href="#photos" role="tab" aria-controls="photos" aria-selected="false">
+                    <i class="fas fa-camera fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="following-tab" data-toggle="tab" href="#following" role="tab" aria-controls="following" aria-selected="false">
+                    <i class="fas fa-user-friends fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="post-tab" data-toggle="tab" href="#post" role="tab" aria-controls="post" aria-selected="false">
+                    <i class="fas fa-pencil-alt fa-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="upload-tab" data-toggle="tab" href="#upload" role="tab" aria-controls="upload" aria-selected="false">
+                    <i class="fas fa-cloud-upload-alt fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content w-100" id="myTabContent">
+            <!-- Home Tab -->
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <h6>Home</h6>
+                <div class="content-grid" id="homeContent">
+                    <!-- Video Player -->
+                    <div class="video-container">
+                        <video id="videoPlayer" class="video">
+                            <source src="./assets/video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="controls">
+                            <div class="video-controls-left">
+                                <button id="playPauseBtn" class="control-btn"><i class="fas fa-play"></i></button>
+                                <div class="time-display">
+                                    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+                                </div>
+                            </div>
+                            <div class="video-controls-right">
+                                <input id="volumeRange" type="range" min="0" max="1" step="0.1" value="1" class="control-input">
+                                <button id="fullScreenBtn" class="control-btn"><i class="fas fa-expand"></i></button>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div id="progressBar" class="progress-bar">
+                                <div id="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photos Tab -->
+            <div class="tab-pane fade" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+                <h6>Photos</h6>
+                <div class="content-grid" id="photosContent">
+                    <p>Placeholder content for photos feed.</p>
+                </div>
+            </div>
+
+            <!-- Following Tab -->
+            <div class="tab-pane fade" id="following" role="tabpanel" aria-labelledby="following-tab">
+                <h6>Following</h6>
+                <div class="content-grid" id="followingContent">
+                    <p>Placeholder content for following feed.</p>
+                </div>
+            </div>
+
+            <!-- Post Tab -->
+            <div class="tab-pane fade" id="post" role="tabpanel" aria-labelledby="post-tab">
+                <h6>Post</h6>
+                <p>This tab will be used for posting content in the future.</p>
+            </div>
+
+            <!-- Upload Tab -->
+            <div class="tab-pane fade" id="upload" role="tabpanel" aria-labelledby="upload-tab">
+                <h6>Upload Content</h6>
+                <p>This tab will be for future uploads.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/upload.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/video.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+/* Additional styles for enhanced UI */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5; /* Light gray background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Dark text */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #555; /* Darker gray text */
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #333; /* Dark text on hover */
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+    border-bottom: none; /* Remove default border */
+}
+
+.nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 16px; /* Adjusted size */
+    color: #555; /* Darker gray text */
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove default border-radius */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.nav-tabs .nav-link.active {
+    color: #333; /* Dark text when active */
+    background-color: transparent; /* Transparent background */
+    border-bottom: 2px solid #333; /* Bottom border when active */
+}
+
+/* Buttons */
+.btn {
+    font-size: 14px; /* Adjusted size */
+    padding: 8px 16px; /* Padding */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.btn-outline-primary {
+    color: #007bff; /* Primary color for text */
+    border-color: #007bff; /* Primary color for border */
+    background-color: transparent; /* Transparent background */
+}
+
+.btn-outline-primary:hover {
+    color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3; /* Darker blue border on hover */
+    background-color: #f8f9fa; /* Light background on hover */
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Focus shadow */
+}
+
+/* Profile Photo */
+.profile-photo {
+    width: 36px; /* Adjusted size */
+    height: 36px; /* Adjusted size */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Feed and Post Cards */
+.post-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Enhanced shadow on hover */
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-header .profile-photo {
+    margin-right: 10px;
+}
+
+.post-header .username {
+    font-weight: bold;
+    color: #333;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-content {
+    padding: 10px;
+}
+
+.post-actions {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post-actions .btn {
+    margin-right: 10px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Grid Layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 22px; /* Adjusted size for smaller screens */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 14px; /* Adjusted size for smaller screens */
+    }
+
+    .btn {
+        font-size: 12px; /* Adjusted size for smaller screens */
+        padding: 6px 12px; /* Adjusted padding for smaller screens */
+    }
+
+    .profile-photo {
+        width: 32px; /* Adjusted size for smaller screens */
+        height: 32px; /* Adjusted size for smaller screens */
+    }
+
+    .post-card {
+        margin-bottom: 15px;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted grid for smaller screens */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px; /* Adjusted size for even smaller screens */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 12px; /* Further adjusted size for smaller screens */
+    }
+
+    .btn {
+        font-size: 10px; /* Further adjusted size for smaller screens */
+        padding: 5px 10px; /* Further adjusted padding for smaller screens */
+    }
+
+    .profile-photo {
+        width: 28px; /* Further adjusted size for smaller screens */
+        height: 28px; /* Further adjusted size for smaller screens */
+    }
+
+    .post-card {
+        margin-bottom: 10px; /* Reduced margin for smaller screens */
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjusted grid for smallest screens */
+        gap: 10px;
+    }
+}
